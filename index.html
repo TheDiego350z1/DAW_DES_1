@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"           
+    content="Calculadora de ingresos y egresos">
     <title>Document</title>
 
     <!--Bootstrap-->
@@ -43,14 +46,14 @@
                     <option value="2">Egreso</option>
                 </select>
                 <div class="mb-3">
-                    <input aria-label="Monto" id="descrip" name="Descripción" class="form-control" type="text" />
-                    <input aria-label="Monto" id="monto" name="Monto" class="form-control" type="number" />
+                    <input aria-label="Monto" id="descrip" name="Descripción" class="form-control" type="text" placeholder="Ingreso" />
+                    <input aria-label="Monto" id="monto" name="Monto" class="form-control" type="number" placeholder="Monto" />
                 </div>
                 <button id="add" type="button" class="btn btn-primary">Agregar</button>
             </section>
             <section class="status col-6">
                 <div class="">
-                    <button id="ingreso" type="button" class="btn btn-primary col-4">Ingresos</button>
+                    <button id="ingreso" type="button" class="btn btn-primary col-4" >Ingresos</button>
                     <button id="egreso" type="button" class="btn btn-primary col-4">Egresos</button>
                     <section id="mostrar_ingresos" class="col-12">
                         <table id="table_mostrar_ingresos">
