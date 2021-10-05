@@ -1,5 +1,7 @@
 import meses from "./asset/meses.js";
 import transaction from "./asset/transaction.js";
+import ingresos_mostrar from "./asset/ingresos_mostrar.js";
+import egresos_mostrar from "./asset/egresos_mostrar.js";
 
 let showDate = document.getElementById('fecha');
 let date = new Date;  //Función para obtener la fecha
@@ -25,6 +27,7 @@ const mostrar_egresos = document.getElementById('mostrar_egresos');
 ingreso.onclick = function () {
     mostrar_ingresos.hidden = false;
     mostrar_egresos.hidden = true;
+    ingresos_mostrar();
     console.log('ingresos');
 };
 //mostrar egresos
@@ -32,5 +35,6 @@ ingreso.onclick = function () {
 egreso.onclick = function () {
     mostrar_ingresos.hidden = true;
     mostrar_egresos.hidden = false;
+    egresos_mostrar();
     console.log('egresos');
 }
