@@ -1,10 +1,36 @@
-let today = new Date();
+import meses from "./asset/meses.js";
+import transaction from "./asset/transaction.js";
 
-/* 
-    Date() devuelve los valores de los meses:
-    0 - Enero, 1 - Febrero, 2 - Marzo, 3 - Abril, 4 - Mayo ...
-*/
+let showDate = document.getElementById('fecha');
+let date = new Date;  //Función para obtener la fecha
 
-let month  = today.getMonth();
+const add = document.getElementById('add'); //boton para agregar transacciones
 
-console.log(month);
+
+//Mostramos la el mes y el año
+showDate.innerHTML = `Mes de ${meses[date.getMonth()]} del ${date.getUTCFullYear()}`;
+
+add.onclick = function () {
+    transaction();
+};
+
+//Mostrar sección de datos
+
+const ingreso = document.getElementById('ingreso'); //Capturar el boton de ingresos
+const mostrar_ingresos = document.getElementById('mostrar_ingresos'); //Captura el contenedos para mostrar ingresos
+const egreso = document.getElementById('egreso');
+const mostrar_egresos = document.getElementById('mostrar_egresos');
+
+//Mostrar ingresos
+ingreso.onclick = function () {
+    mostrar_ingresos.hidden = false;
+    mostrar_egresos.hidden = true;
+    console.log('ingresos');
+};
+//mostrar egresos
+
+egreso.onclick = function () {
+    mostrar_ingresos.hidden = true;
+    mostrar_egresos.hidden = false;
+    console.log('egresos');
+}

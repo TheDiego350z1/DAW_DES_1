@@ -7,19 +7,64 @@
     <title>Document</title>
 
     <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
     <header>
 
     </header>
-    <main>
-        <section class="container">
+    <main class="container">
+        <div class="d-flex justify-content-center">
 
+            <section class=" user_information">
+                <div class="col-12">
+                    <h1 id="fecha"></h1>
+                    <span id="balance"></span>
+                </div>
+                <div class="col-12">
+                    <p>Ingresos:</p>
+                    <span id="ingresos"></span>
+                </div>
+                <div class="col-12">
+                    <p>Egreso</p>
+                    <span id="egresos"></span>
+                </div>
+                <div class="col-12">
+                    <p>Porsentaje de gastos:</p>
+                    <span id="porcentaje"></span>
+                </div>
+            </section>
+        </div>
+        <section class="col-12 d-flex justify-content-center ">
+            <section class="col-6 transaction">
+                <h2>Transacción</h2>
+                <select name="Opciones" id="options" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option value="1">Ingreso</option>
+                    <option value="2">Egreso</option>
+                </select>
+                <div class="mb-3">
+                    <input aria-label="Monto" id="descrip" name="Descripción" class="form-control" type="text" />
+                    <input aria-label="Monto" id="monto" name="Monto" class="form-control" type="number" />
+                </div>
+                <button id="add" type="button" class="btn btn-primary">Agregar</button>
+            </section>
+            <section class="status col-6">
+                <div class="">
+                    <button id="ingreso" type="button" class="btn btn-primary col-4">Ingresos</button>
+                    <button id="egreso" type="button" class="btn btn-primary col-4">Egresos</button>
+                    <section id="mostrar_ingresos" class="col-12">
+                        <table id="table_mostrar_ingresos">
+                        </table>
+                    </section>
+                    <section hidden id="mostrar_egresos" class="col-12">
+                        <p>Egresos</p>
+                    </section>
+                </div>
+            </section>
         </section>
     </main>
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
