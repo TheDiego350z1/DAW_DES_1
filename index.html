@@ -19,7 +19,7 @@
     <main class="container">
         <div class="d-flex justify-content-center">
 
-            <section class=" user_information">
+            <section class="user_information row">
                 <div class="col-12">
                     <h1 id="fecha"></h1>
                     <span id="balance"></span>
@@ -38,7 +38,7 @@
                 </div>
             </section>
         </div>
-        <section class="col-12 d-flex justify-content-center ">
+        <section class="row">
             <section class="col-6 transaction">
                 <h2>Transacción</h2>
                 <select name="Opciones" id="options" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -46,21 +46,21 @@
                     <option value="2">Egreso</option>
                 </select>
                 <div class="mb-3">
-                    <input aria-label="Monto" id="descrip" name="Descripción" class="form-control" type="text" placeholder="Ingreso" />
-                    <input aria-label="Monto" id="monto" name="Monto" class="form-control" type="number" placeholder="Monto" />
+                    <input aria-label="Ingreso" id="descrip" name="Descripción" class="form-control" type="text" placeholder="Ingreso" required />
+                    <input aria-label="Monto" id="monto" name="Monto" class="form-control" type="number" placeholder="Monto" required />
                 </div>
-                <button id="add" type="button" class="btn btn-primary">Agregar</button>
+                <button id="add" type="submit" class="btn btn-primary">Agregar</button>
             </section>
             <section class="status col-6">
-                <div class="">
-                    <button id="ingreso" type="button" class="btn btn-primary col-4" >Ingresos</button>
-                    <button id="egreso" type="button" class="btn btn-primary col-4">Egresos</button>
+                <div class="row d-flex justify-content-center">
+                    <button id="ingreso" type="submit" class="btn btn-primary col-4" >Ingresos</button>
+                    <button id="egreso" type="submit" class="btn btn-primary col-4">Egresos</button>
                     <section id="mostrar_ingresos" class="col-12">
-                        <table id="table_mostrar_ingresos">
+                        <table id="table_mostrar_ingresos" class="table">
                         </table>
                     </section>
                     <section hidden id="mostrar_egresos" class="col-12">
-                        <table id="table_mostrar_egresos">
+                        <table id="table_mostrar_egresos" class="table">
                         </table>
                     </section>
                 </div>
