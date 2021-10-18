@@ -3,26 +3,45 @@ import transaction from "./asset/transaction.js";
 import ingresos_mostrar from "./asset/ingresos_mostrar.js";
 import egresos_mostrar from "./asset/egresos_mostrar.js";
 import total_ingresos from  "./asset/total_ingresos.js"
+import limpiar_campos from "./asset/limpiar_campos.js";
+import sum_ingresos from "./asset/sum_ingresos.js";
+import transacciones from "./asset/transacciones.js";
+import sum_egresos from "./sum_egresos.js";
 
 let showDate = document.getElementById('fecha');
 let date = new Date;  //Función para obtener la fecha
+let ingresos = document.getElementById('ingresos');
+let egresos = document.getElementById('egresos');
 
 const add = document.getElementById('add'); //boton para agregar transacciones
 
+if (ingresos.value == undefined) {
+    ingresos.innerHTML = ` $0.00`
+};
+if (egresos.value == undefined) {
+    egresos.innerHTML= " $0.00";
+};
 
 //Mostrar el total de ingresos 
+add.onclick = function () {
+    transaction();
+    limpiar_campos();
+    let sum_ingre = sum_ingresos(transacciones);
+    ingresos.innerHTML = `$ ${sum_ingre}`;
+    let sum_egre = sum_egresos(transacciones);
+    egresos.innerHTML = `$ ${sum_egre}`;
+};
 
-let ingresos = document.getElementById('ingresos');
 
-ingresos.innerHTML = `<p> ${total_ingresos} </p> `;
-console.log(total_ingresos);
+
+
+
+console.log("Total ingesos" + total_ingresos);
+console.log("El vador de ingresos es:" + ingresos);
 
 //Mostramos la el mes y el año
 showDate.innerHTML = `Mes de ${meses[date.getMonth()]} del ${date.getUTCFullYear()}`;
 
-add.onclick = function () {
-    transaction();
-};
 
 //Mostrar sección de datos
 
@@ -36,13 +55,12 @@ ingreso.onclick = function () {
     mostrar_ingresos.hidden = false;
     mostrar_egresos.hidden = true;
     ingresos_mostrar();
-    console.log('ingresos');
 };
+
 //mostrar egresos
 
 egreso.onclick = function () {
     mostrar_ingresos.hidden = true;
     mostrar_egresos.hidden = false;
     egresos_mostrar();
-    console.log('egresos');
 }

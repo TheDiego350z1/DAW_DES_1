@@ -6,8 +6,6 @@ fecha.innerHTML = `Presupuesto de ${meses[mesActual]}`;
 
 function fecha () {
     let mesActual = hoy.getMonth();
-
-    
     console.log(meses[mesActual])
 };
 
