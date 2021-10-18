@@ -1,3 +1,5 @@
+import detalle_egreso from "./detalle_egreso.js";
+import sum_ingresos from "./sum_ingresos.js";
 import transacciones from "./transacciones.js";
 
 function egresos_mostrar () {
@@ -18,7 +20,8 @@ function egresos_mostrar () {
     });
     //Imprime en HTMl los egresos
     mostrar_egresos_transaccion.forEach(get => {
-        mostrar_egresos.innerHTML += `<tbody><tr><th scope="row"> ${get.descrip} </th><td> ${get.monto}</td></tr></tbody>`;
+        let porcentaje_egresos = detalle_egreso(get.monto,sum_ingresos(transacciones) );
+        mostrar_egresos.innerHTML += `<tbody><tr><th scope="row"> ${get.descrip} </th><td>$ ${get.monto}</td></tr> </th><td>${porcentaje_egresos} %</td></tr> </tbody>`;
     });
 };
 

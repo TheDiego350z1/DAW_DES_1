@@ -18,7 +18,7 @@ function ingresos_mostrar () {
     });
     //Muestro los lementos en html
     mostrar_ingresos_transaccion.forEach(get => {
-        mostrar_ingresos.innerHTML += `<tbody><tr><th scope="row">${get.descrip} </th> <td>${get.monto} </td></tr></tbody>`;
+        mostrar_ingresos.innerHTML += `<tbody><tr><th scope="row">${get.descrip} </th> <td>$ ${get.monto} </td></tr></tbody>`;
     });
 };
 
