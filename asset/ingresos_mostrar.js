@@ -1,15 +1,14 @@
 import transacciones from "./transacciones.js";
 
 function ingresos_mostrar () {
-    let mostrar_ingresos = document.getElementById('table_mostrar_ingresos');
+    let mostrar_ingresos = document.getElementById('table_mostrar_ingresos'); //Captura el elemento html
 
     if (transacciones.length == 0 ) {
-        return alert('No hay transacciones que mostrar');
-    }
+        return alert('No hay transacciones que mostrar'); //Comprueba si hay transacciones
+    }; 
+    mostrar_ingresos.innerHTML = ``; //Limpia el contenido html
 
-    mostrar_ingresos.innerHTML = ``;
-
-    let mostrar_ingresos_transaccion = []; //Variable para almacenar las transacciones
+    let mostrar_ingresos_transaccion = [];//Variable para almacenar las transacciones
     
     //Recorremos el array con todas las transacciones almacenadas
     transacciones.forEach(transaccion => {
@@ -17,11 +16,10 @@ function ingresos_mostrar () {
             mostrar_ingresos_transaccion.push(transaccion);
         };
     });
-
+    //Muestro los lementos en html
     mostrar_ingresos_transaccion.forEach(get => {
         mostrar_ingresos.innerHTML += `<tbody><tr><th scope="row">${get.descrip} </th> <td>${get.monto} </td></tr></tbody>`;
     });
-
 };
 
 export default ingresos_mostrar;
