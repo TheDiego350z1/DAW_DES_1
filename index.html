@@ -21,10 +21,10 @@
 
     </header>
     <main class="container">
-        <div class="d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
 
-            <section class="user_information">
-                <div class="col-12 d-flex flex-column align-items-center">
+            <section class="col-12 col-sm-12 col-lg-12 user_information">
+                <div class="col-12  d-flex flex-column align-items-center">
                     <h1 class="" id="fecha"></h1>
                     <h2 class="" id="balance"></h2>
                 </div>
@@ -44,8 +44,8 @@
         </div>
         <!--Sección de ingreso de información + mostrar datos-->
         <section class="row acciones">
-            <section class="col-6 transaction">
-                <h2>Transacción</h2>
+            <section class=" col-12 col-sm-12 col-lg-6  transaction">
+                <h5>Transacción</h5>
                 <select name="Opciones" id="options" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option value="1">Ingreso</option>
                     <option value="2">Egreso</option>
@@ -58,8 +58,9 @@
                     <button id="add" type="submit" class="btn btn-primary btn-lg">Agregar</button>
                 </div>
             </section>
-            <section class="status col-6">
+            <section class="col-sm-12 col-12 col-lg-6 status ">
                 <div class="row d-flex justify-content-center buttons_actions">
+                    <h5>Listado de transacciones</h5>
                     <div class="row d-flex justify-content-center">
                         <button id="ingreso" type="submit" class="btn btn-primary col-4 btn-lg" >Ingresos</button>
                         <button id="egreso" type="submit" class="btn btn-primary col-4 btn-lg">Egresos</button>

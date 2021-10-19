@@ -8,6 +8,9 @@ header {
     padding: 5px;
     margin-top: 5px;
 }
+.user_information {
+    max-width: 500px;
+}
 
 .data_information {
     width: 250px;
@@ -15,6 +18,10 @@ header {
 
 .acciones {
     margin-top: 10px;
+}
+.acciones section {
+    margin-top: 10px;
+    border: 1px solid black;
 }
 
 .tipos input{
