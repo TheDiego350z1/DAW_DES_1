@@ -28,7 +28,7 @@ if (egresos.value == undefined) {
 };
 if (porcentaje.value == undefined) {
     porcentaje.innerHTML = `0%`;
-}
+};
 
 //Mostrar el total de ingresos 
 add.onclick = function () {

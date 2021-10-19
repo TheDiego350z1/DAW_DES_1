@@ -14,8 +14,7 @@ function transaction () {
     let mont = document.getElementById('monto').value; //captura el valor del monto
     validation(dat, descripcion, mont); //Validamos si los campos tiene texto o no
     let nuevaTransaccion = new Transacciones (dat, descripcion, mont); //Creamos un nuevo objeto con los datos 
-    agregarTransacciones(nuevaTransaccion);
-    console.log(transacciones);
+    agregarTransacciones(nuevaTransaccion); //Agregamos las transacciones al array
 };
 
 function agregarTransacciones (nuevaTransaccion) {
