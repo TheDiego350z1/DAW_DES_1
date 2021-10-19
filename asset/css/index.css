@@ -1,3 +1,26 @@
+header {
+    height: 5vh;
+}
+
+.informacion {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
 .data_information {
     width: 250px;
+}
+
+.acciones {
+    margin-top: 10px;
+}
+
+.tipos input{
+    margin-top: 10px;
+}
+
+.buttons_actions button {
+    margin-left: 5px;
 }

@@ -24,41 +24,46 @@
         <div class="d-flex justify-content-center">
 
             <section class="user_information">
-                <div class="col-12">
+                <div class="col-12 d-flex flex-column align-items-center">
                     <h1 class="" id="fecha"></h1>
-                    <span class="" id="balance"></span>
+                    <h2 class="" id="balance"></h2>
                 </div>
-                <div class="col-12 d-flex">
+                <div class="col-12 d-flex informacion">
                     <span class="data_information">Ingresos: </span>
                     <span id="ingresos" style="width: 100px;"></span>
                 </div>
-                <div class="col-12 d-flex">
+                <div class="col-12 d-flex informacion">
                     <span class="data_information">Egreso:</span>
                     <span id="egresos"></span>
                 </div>
-                <div class="col-12 d-flex">
+                <div class="col-12 d-flex informacion">
                     <span class="data_information">Porsentaje de gastos:</span>
                     <span id="porcentaje"></span>
                 </div>
             </section>
         </div>
-        <section class="row">
+        <!--Sección de ingreso de información + mostrar datos-->
+        <section class="row acciones">
             <section class="col-6 transaction">
                 <h2>Transacción</h2>
                 <select name="Opciones" id="options" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option value="1">Ingreso</option>
                     <option value="2">Egreso</option>
                 </select>
-                <div class="mb-3">
+                <div class="mb-3 tipos">
                     <input aria-label="Ingreso" id="descrip" name="Descripción" class="form-control" type="text" placeholder="Descripción" required />
                     <input aria-label="Monto" id="monto" name="Monto" class="form-control" type="number" placeholder="Monto" required />
                 </div>
-                <button id="add" type="submit" class="btn btn-primary">Agregar</button>
+                <div class="d-flex justify-content-center">
+                    <button id="add" type="submit" class="btn btn-primary btn-lg">Agregar</button>
+                </div>
             </section>
             <section class="status col-6">
-                <div class="row d-flex justify-content-center">
-                    <button id="ingreso" type="submit" class="btn btn-primary col-4" >Ingresos</button>
-                    <button id="egreso" type="submit" class="btn btn-primary col-4">Egresos</button>
+                <div class="row d-flex justify-content-center buttons_actions">
+                    <div class="row d-flex justify-content-center">
+                        <button id="ingreso" type="submit" class="btn btn-primary col-4 btn-lg" >Ingresos</button>
+                        <button id="egreso" type="submit" class="btn btn-primary col-4 btn-lg">Egresos</button>
+                    </div>
                     <section id="mostrar_ingresos" class="col-12">
                         <table id="table_mostrar_ingresos" class="table">
                         </table>

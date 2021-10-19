@@ -21,7 +21,7 @@ function egresos_mostrar () {
     //Imprime en HTMl los egresos
     mostrar_egresos_transaccion.forEach(get => {
         let porcentaje_egresos = detalle_egreso(get.monto,sum_ingresos(transacciones) );
-        mostrar_egresos.innerHTML += `<tbody><tr><th scope="row"> ${get.descrip} </th><td>$ ${get.monto}</td></tr> </th><td>${porcentaje_egresos} %</td></tr> </tbody>`;
+        mostrar_egresos.innerHTML += `<tbody><tr><th scope="row"> ${get.descrip} </th> <td>$ ${get.monto}</td> <td>${porcentaje_egresos} %</td> </tr> <tr> </tbody>`;
     });
 };
 

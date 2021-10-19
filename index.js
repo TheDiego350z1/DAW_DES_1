@@ -13,12 +13,16 @@ let date = new Date;  //Función para obtener la fecha
 let ingresos = document.getElementById('ingresos');
 let egresos = document.getElementById('egresos');
 let porcentaje = document.getElementById('porcentaje');
+let balance = document.getElementById('balance');
 
 const add = document.getElementById('add'); //boton para agregar transacciones
 
 if (ingresos.value == undefined) {
-    ingresos.innerHTML = `$0.00`
+    ingresos.innerHTML = `$0.00`;
 };
+if (balance.value == undefined) {
+    balance.innerHTML = `$0.00`;
+}
 if (egresos.value == undefined) {
     egresos.innerHTML = `$0.00`;
 };
@@ -36,6 +40,9 @@ add.onclick = function () {
     egresos.innerHTML = `$ ${sum_egre}`;
     let getPorcentaje = get_porcentaje(sum_ingre, sum_egre);
     porcentaje.innerHTML = `${getPorcentaje}%`;
+    let resta = sum_ingre - sum_egre;
+    balance.innerHTML = `$ ${resta}`;
+    console.log(JSON.stringify(transacciones));
 };
 
 //Mostramos la el mes y el año
